@@ -3,9 +3,10 @@ try:
     import requests
 except Exception as e:
     print(e)
-   
+    
+url = input('Enter Url to Check Server:- ')
 try:
-    response = requests.get('https://www.abdelkhk.com')
+    response = requests.get(url)
     response.raise_for_status()
 except requests.exceptions.HTTPError as e:
     print(e)
